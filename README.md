@@ -18,18 +18,18 @@ farm with Cabernet Sauvignon, Merlot and narrow-leaved lavender.
 
 Agricultural enterprises face hard constraints that a static seasonal plan ignores:
 
-- **Water deficit** reaches **40–70%** of the irrigation demand in dry years.
-- **Narrow phenological windows** — flowering lasts only **7–14 days**, and
+- **Water deficit** reaches 40–70% of the irrigation demand in dry years.
+- **Narrow phenological windows** — flowering lasts only 7–14 days, and
   missing it costs a large share of the potential yield.
 - **Drought risk** during critical phases can reduce the harvest by
-  **30–50%**.
+  30–50%.
 
 Classical LP / MILP models use averaged seasonal norms and cannot re-plan
 when the season deviates. Agro-physiological models (DSSAT, CropSyst) need
 ≈50 calibrated parameters per crop and are not transferable across regions.
-This project fills the gap with a **hybrid LP + MAS** approach: an LP sets
+This project fills the gap with a hybrid LP + MAS approach: an LP sets
 target areas, an agent-based simulation runs daily dispatch, and an
-**adaptive mechanism** raises resource limits when the plan is hitting a
+adaptive mechanism raises resource limits when the plan is hitting a
 constraint.
 
 ---
@@ -59,7 +59,7 @@ and compare plans, adaptations and financial outcomes side by side.
 |---|---|---|---|---|
 | LP / MILP | No (deterministic coefficients) | No (seasonal aggregates) | Low | Limited |
 | Empirical regressions | Partial (weather predictors) | No | Medium | Low — not transferable |
-| Agro-physiological (DSSAT, CropSyst) | Yes (daily weather) | Partial (growth, water) | Very high (≈50 params to calibrate) | Difficult |
+| Agro-physiological (DSSAT, CropSyst) | Yes (daily weather) | Partial (growth, water) | Very high (about 50 params to calibrate) | Difficult |
 | **This work: hybrid LP + MAS** | **Yes (scenario-based)** | **Yes (daily dispatch)** | **Moderate** | **Adapted — phases, water balance, adaptive limits** |
 
 ---
